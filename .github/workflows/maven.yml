@@ -5,18 +5,17 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
- 
-  permissions: read-all
+permissions: read-all
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions: 
-    pull-requests: 'write'
-    packages: write
-    deployments: write
-    contents: read
-    actions: read
+      pull-requests: 'write'
+      packages: write
+      deployments: write
+      contents: read
+      actions: read
 
     steps:
     - uses: actions/checkout@v3
